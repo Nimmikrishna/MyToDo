@@ -14,8 +14,8 @@ The application also highlights tasks are due within 2 days.
 | 10002         | Personal         |
 
 
-- **id**: unique identifier for each row in the task_category table, INT
-- **name**: category's name, STRING
+- **id(INT)**: unique identifier for each row in the task_category table
+- **name(STRING)**: category's name
 
 
 ### 2. task
@@ -27,12 +27,12 @@ The application also highlights tasks are due within 2 days.
 | 113 | send mail | 2023-09-11 |  2023-09-12 |  False | False  | True | 10001 |
 
 
-- **id**: unique identifier for each row in the task table, INT
-- **description**: task description, STRING
-- **date_created**: date on which task is created, DATE
-- **due_date**: date on which task is due, DATE
-- **not_started**: bool value to indicate if task is not yet started, BOOL
-- **in_progress**: bool value to indicate that task is started and in progress, BOOL
-- **completed**: bool value to indicate that task is completed
-- **category_id**: foreign key constraint that establishes a relationship between the "category_id" column in the
-"task" table and the "id" column in the "category" table, INT
+- **id(INT)**: unique identifier for each row in the task table
+- **description(STRING)**: task description
+- **date_created(DATE)**: date on which task is created, Default: Current_date
+- **due_date(DATE)**: date on which task is due
+- **not_started(BOOL)**: bool value to indicate if task is not yet started, Default: True
+- **in_progress(BOOL)**: bool value to indicate that task is started and in progress, Default: False
+- **completed(BOOL)**: bool value to indicate that task is completed, Default: False
+- **category_id(INT)**: foreign key constraint that establishes a relationship between the "category_id" column in the
+"task" table and the "id" column in the "category" table
